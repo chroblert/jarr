@@ -57,3 +57,13 @@ func GetLongestEls(arr []string) (longest string) {
 	}
 	return
 }
+
+// 获取在A中，不在B中的元素
+func GetEleInANotInB(a_arr, b_arr []string) (in_a_arr []string) {
+	for _, a_e := range a_arr {
+		if !EleInArr(a_e, b_arr) {
+			in_a_arr = append(in_a_arr, a_e)
+		}
+	}
+	return
+}
